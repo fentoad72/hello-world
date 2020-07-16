@@ -1,6 +1,6 @@
-language: python
+language: bash
 
-script: fentoad72/hello-world/hello_world.py
+script: ${TRAVIS_BUILD_DIR}/fentoad72/hello-world/hello_world.py
 
 python: 
  - 2.7
