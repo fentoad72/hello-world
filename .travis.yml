@@ -1,6 +1,10 @@
 language: bash
 
-script: ${TRAVIS_BUILD_DIR}/fentoad72/hello-world/hello_world.py
+script: 
+  - pwd
+  - ls -l
+  - echo ${TRAVIS_BUILD_DIR}
+  - hello_world.py
 
 python: 
  - 2.7
