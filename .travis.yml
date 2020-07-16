@@ -4,7 +4,7 @@ script:
   - pwd
   - ls -l
   - echo ${TRAVIS_BUILD_DIR}
-  - hello_world.py
+  - ./hello_world.py
 
 python: 
  - 2.7
