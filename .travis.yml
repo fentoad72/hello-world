@@ -1,6 +1,6 @@
 language: python
 
-script: fentoad72/hello_world/hello_world.py
+script: fentoad72/hello-world/hello_world.py
 
 python: 
  - 2.7
