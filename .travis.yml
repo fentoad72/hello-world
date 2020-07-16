@@ -1,14 +1,15 @@
 language: bash
 
+python: 
+ - 2.7
+ - 3.6
+
 script: 
   - pwd
   - ls -l
   - echo ${TRAVIS_BUILD_DIR}
   - ./hello_world.py
 
-python: 
- - 2.7
- - 3.6
 #
 branches:
         only:
