@@ -1,4 +1,4 @@
-#!/bin/python
+#!/usr/bin/env python
 
 print("The quick brown fox jumped over the lazy dog.")
 
