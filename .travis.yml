@@ -4,10 +4,11 @@ python:
  - 2.7
  - 3.6
 
-script: 
+before_script:
   - pwd
   - ls -l
-  - echo ${TRAVIS_BUILD_DIR}
+
+script: 
   - ./hello_world.py
 
 #
