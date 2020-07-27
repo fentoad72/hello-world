@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-use numpy
+import docstring
 
 print("The quick brown fox jumped over the lazy dog.")
 print("It isn't our intention that the people are intending.")
