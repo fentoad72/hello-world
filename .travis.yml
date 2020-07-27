@@ -4,10 +4,11 @@ python:
  - 2.7
  - 3.6
 
-install:
-  - pylint
+#install:
+#  - pylint
 
-#before_script:
+before_script:
+  - pylint
 
 script: 
   - pwd
