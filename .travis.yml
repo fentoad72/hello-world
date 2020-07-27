@@ -9,6 +9,9 @@ python:
 
 #before_script:
 
+services:
+  - pylint
+
 script: 
   - pwd
   - ls -l
