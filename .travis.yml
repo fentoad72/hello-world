@@ -4,16 +4,16 @@ python:
  - 2.7
  - 3.6
 
-#install:
-#  - pylint
-
-before_script:
-  - pylint
+install:
+  - pip install pylint
 
 script: 
   - pwd
   - ls -l
   - ./hello_world.py
+
+after_script:
+  - pylint ./hello_world.py
 
 #
 branches:
