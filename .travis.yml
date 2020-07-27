@@ -7,11 +7,11 @@ python:
 #install:
 #  - bash
 
-before_script:
-  - pwd
-  - ls -l
+#before_script:
 
 script: 
+  - pwd
+  - ls -l
   - ./hello_world.py
 
 #
