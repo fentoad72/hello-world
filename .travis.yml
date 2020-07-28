@@ -1,5 +1,7 @@
 language: python
-python: 3.6
+python: 
+  - 2.7
+  - 3.6
 os: linux
 dist: xenial
 version: ~> 1.0
@@ -9,9 +11,6 @@ before_install:
     pip install pylint
 
 jobs:
-  - python:
-    - 2.7
-    - 3.6
   - include:
     - stage: prelim
       script: 
