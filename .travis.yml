@@ -12,9 +12,6 @@ install:
   - pip install pylint
 
 jobs:
-  -python: 
-    - "3.6"
-    - "2.7"
   - include:
     - stage: prelim
       script: 
@@ -22,6 +19,9 @@ jobs:
 #       - which pylint
         - ls -l
     - stage: run_hello
+      python: 
+       - "3.6"
+       - "2.7"
       script: ./hello_world.py
 
 after_script:
