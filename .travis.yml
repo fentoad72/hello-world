@@ -15,8 +15,8 @@ jobs:
         - ls -l
     - stage: run_hello
         - python: 
-         -  - 2.7
-         -  - 3.6
+          - 2.7
+          - 3.6
       script: ./hello_world.py
     - stage: linting
         - python: 
