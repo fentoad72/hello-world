@@ -9,17 +9,14 @@ install:
 
 jobs:
   - allow_failure:
-    - linting
+    - pylint
 
 scripts:
-  - name: prelim
-     - pwd
-     - which pylint
-     - ls -l
-  - name: helloworld
-     - ./hello_world.py
-  - name: linting
-     - pylint ./hello_world.py
+  - pwd
+  - which pylint
+  - ls -l
+  - ./hello_world.py
+  - pylint ./hello_world.py
 
 #script: 
 #  - prelim
