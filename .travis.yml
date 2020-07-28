@@ -5,7 +5,7 @@ dist: xenial
 version: ~> 1.0
 
 before_install:
-  - stage: "install pylint"
+# - stage: "install pylint"
     pip install pylint
 
 jobs:
