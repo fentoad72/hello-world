@@ -20,10 +20,10 @@ jobs:
     - allow_failures:
        - linting
 
-script: 
-  - prelim
-  - hello
-  - linting
+#script: 
+#  - prelim
+#  - hello
+#  - linting
 
 #after_script:
 
