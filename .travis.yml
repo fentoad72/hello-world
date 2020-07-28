@@ -8,10 +8,6 @@ install:
   - pip install pylint
 
 jobs:
-  - allow_failures:
-     - linting
-script: 
-  - jobs:
     - prelim:
        - pwd
        - which pylint
@@ -20,6 +16,12 @@ script:
        - ./hello_world.py
     - linting:
        - pylint ./hello_world.py
+    - allow_failures:
+       - linting
+script: 
+  - prelim
+  - hello:
+  - linting:
 
 #after_script:
 
