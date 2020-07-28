@@ -17,12 +17,14 @@ jobs:
         - ls -l
     - stage: run_hello
       script: ./hello_world.py
-    - stage: linting
-      script: pylint ./hello_world.py
   - allow_failure:
     - linting
 
-#after_script:
+after_script:
+  - python:
+     - 2.7
+     - 3.6
+  - pylint ./hello_world.py
 
 #
 branches:
