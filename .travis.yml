@@ -9,7 +9,7 @@ install:
 
 jobs:
   - include:
-    - stage: prelim
+    - stage: test
       script: pwd
       script: which pylint
       script: ls -l
