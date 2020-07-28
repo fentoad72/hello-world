@@ -1,4 +1,7 @@
 language: python
+python:
+  - "3.6"
+  - "2.7"
 os: linux
 dist: xenial
 
@@ -15,9 +18,6 @@ jobs:
         - which pylint
         - ls -l
     - stage: run_hello
-      - python:
-         - 3.6
-         - 2.7
       script: ./hello_world.py
     - stage: linting
       script: pylint ./hello_world.py
