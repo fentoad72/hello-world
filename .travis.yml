@@ -7,6 +7,9 @@ before_install:
 
 
 jobs:
+  - python:
+     - 3.6
+     - 2.7
   - include:
     - stage: test
       script: 
@@ -14,14 +17,8 @@ jobs:
         - which pylint
         - ls -l
     - stage: run_hello
-        - python: 
-          - 2.7
-          - 3.6
       script: ./hello_world.py
     - stage: linting
-        - python: 
-          - 2.7
-          - 3.6
       script: pylint ./hello_world.py
   - allow_failure:
     - linting
