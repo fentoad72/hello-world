@@ -4,9 +4,8 @@ os: linux
 dist: xenial
 
 before_install:
-  - pip install pylint
-
-
+  - stage: "install pylint"
+    pip install pylint
 
 jobs:
   - include:
@@ -17,15 +16,13 @@ jobs:
         - ls -l
     - stage: run_hello
       script: ./hello_world.py
-  - allow_failure:
-    - linting
 
 after_script:
-  - python:
-     - 2.7
-     - 3.6
   - stage: linting
+    script:
     - pylint ./hello_world.py
+  - allow_failure:
+    - linting
 
 #
 branches:
