@@ -9,7 +9,7 @@ before_install:
 
 jobs:
   - include:
-    - stage: test
+    - stage: prelim
       script: 
         - pwd
         - which pylint
@@ -21,8 +21,8 @@ after_script:
   - stage: linting
     script:
     - pylint ./hello_world.py
-  - allow_failure:
-    - linting
+  - allow_failure: linting
+
 
 #
 branches:
