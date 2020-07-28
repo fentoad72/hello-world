@@ -8,20 +8,17 @@ install:
   - pip install pylint
 
 jobs:
+  - include:
+    - stage: prelim
+      script: pwd
+      script: which pylint
+      script: ls -l
+    - stage: run_hello
+      script: ./hello_world.py
+    - stage: linting
+      script: pylint ./hello_world.py
   - allow_failure:
-    - pylint
-
-scripts:
-  - pwd
-  - which pylint
-  - ls -l
-  - ./hello_world.py
-  - pylint ./hello_world.py
-
-#script: 
-#  - prelim
-#  - hello
-#  - linting
+    - linting
 
 #after_script:
 
