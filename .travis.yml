@@ -10,9 +10,10 @@ install:
 jobs:
   - include:
     - stage: test
-      script: pwd
-      script: which pylint
-      script: ls -l
+      script: 
+        - pwd
+        - which pylint
+        - ls -l
     - stage: run_hello
       script: ./hello_world.py
     - stage: linting
