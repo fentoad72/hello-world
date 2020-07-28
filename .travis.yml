@@ -8,10 +8,11 @@ python: 3.6
 #  - "2.7"
 #  - "3.6"
 
-#install:
-#   pip install pylint
+install:
+  stage: pip
+  - pip install pylint
 
-install: skip
+#install: skip
 
 jobs:
   - include:
