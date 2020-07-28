@@ -1,11 +1,10 @@
 language: python
+os: linux
+dist: xenial
 
 before_install:
   - pip install pylint
 
-python: 
- - 2.7
- - 3.6
 
 jobs:
   - include:
@@ -15,8 +14,14 @@ jobs:
         - which pylint
         - ls -l
     - stage: run_hello
+      python: 
+        - 2.7
+        - 3.6
       script: ./hello_world.py
     - stage: linting
+      python: 
+        - 2.7
+        - 3.6
       script: pylint ./hello_world.py
   - allow_failure:
     - linting
