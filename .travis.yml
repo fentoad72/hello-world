@@ -4,16 +4,17 @@ dist: xenial
 version: ~> 1.0
 
 #python: "2.7"
-python: 
-  - "3.6"
-  - "2.7"
+#python: 
+#  - "3.6"
+#  - "2.7"
 
 install:
   - pip install pylint
 
-#install: skip
-
 jobs:
+  -python: 
+    - "3.6"
+    - "2.7"
   - include:
     - stage: prelim
       script: 
