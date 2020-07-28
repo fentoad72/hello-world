@@ -9,7 +9,6 @@ python: 3.6
 #  - "3.6"
 
 install:
-# stage: pip
   - pip install pylint
 
 #install: skip
@@ -24,11 +23,9 @@ jobs:
     - stage: run_hello
       script: ./hello_world.py
 
-#after_script:
-#  - stage: linting
-#    script:
-#    - pylint ./hello_world.py
-#  - allow_failure: linting
+after_script:
+  - pylint ./hello_world.py
+# - allow_failure: pylint
 
 
 #
