@@ -9,7 +9,7 @@ python: 3.6
 #  - "3.6"
 
 install:
-  stage: pip
+# stage: pip
   - pip install pylint
 
 #install: skip
