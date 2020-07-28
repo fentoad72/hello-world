@@ -16,13 +16,16 @@ jobs:
         - which pylint
         - ls -l
     - stage: run_hello
+      python:
+        - 2.7
+        - 3.6
       script: ./hello_world.py
 
-after_script:
-  - stage: linting
-    script:
-    - pylint ./hello_world.py
-  - allow_failure: linting
+#after_script:
+#  - stage: linting
+#    script:
+#    - pylint ./hello_world.py
+#  - allow_failure: linting
 
 
 #
