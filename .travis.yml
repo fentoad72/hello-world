@@ -12,9 +12,9 @@ script:
   - which pylint
   - ls -l
   - ./hello_world.py
-  - pylint ./hello_world.py
 
-#after_script:
+after_script:
+  - pylint ./hello_world.py
 
 #
 branches:
