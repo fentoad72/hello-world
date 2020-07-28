@@ -2,6 +2,7 @@ language: python
 python: 3.6
 os: linux
 dist: xenial
+version: ~> 1.0
 
 before_install:
   - stage: "install pylint"
