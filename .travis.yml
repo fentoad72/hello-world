@@ -7,6 +7,10 @@ python:
 install:
   - pip install pylint
 
+jobs:
+  - allow_failure:
+    - linting
+
 scripts:
   - name: prelim
      - pwd
@@ -16,8 +20,6 @@ scripts:
      - ./hello_world.py
   - name: linting
      - pylint ./hello_world.py
-  - allow_failure:
-       - pylint
 
 #script: 
 #  - prelim
