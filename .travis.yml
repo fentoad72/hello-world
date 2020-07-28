@@ -1,7 +1,4 @@
 language: python
-python:
-  - "3.6"
-  - "2.7"
 os: linux
 dist: xenial
 
@@ -21,6 +18,9 @@ jobs:
       script: ./hello_world.py
     - stage: linting
       script: pylint ./hello_world.py
+        - python:
+          - "3.6"
+          - "2.7"
   - allow_failure:
     - linting
 
