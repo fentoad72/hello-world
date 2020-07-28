@@ -7,18 +7,17 @@ python:
 install:
   - pip install pylint
 
-jobs:
-  -include:
-    - name: prelim
-       - pwd
-       - which pylint
-       - ls -l
-    - name: hello
-       - ./hello_world.py
-    - name: linting
-       - pylint ./hello_world.py
-    - allow_failures:
-       - linting
+scripts:
+  - name: prelim
+     - pwd
+     - which pylint
+     - ls -l
+  - name: helloworld
+     - ./hello_world.py
+  - name: linting
+     - pylint ./hello_world.py
+  - allow_failure:
+       - pylint
 
 #script: 
 #  - prelim
