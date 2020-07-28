@@ -9,13 +9,17 @@ install:
 
 jobs:
   - allow_failures:
-     - pylint
+     - linting
 script: 
-  - pwd
-  - which pylint
-  - ls -l
-  - ./hello_world.py
-  - pylint ./hello_world.py
+  - jobs:
+    - prelim:
+       - pwd
+       - which pylint
+       - ls -l
+    - hello:
+       - ./hello_world.py
+    - linting:
+       - pylint ./hello_world.py
 
 #after_script:
 
