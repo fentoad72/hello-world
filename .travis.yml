@@ -24,7 +24,8 @@ after_script:
   - python:
      - 2.7
      - 3.6
-  - pylint ./hello_world.py
+  - stage: linting
+    - pylint ./hello_world.py
 
 #
 branches:
