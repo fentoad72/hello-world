@@ -9,6 +9,9 @@ before_install:
     pip install pylint
 
 jobs:
+  - python:
+    - 2.7
+    - 3.6
   - include:
     - stage: prelim
       script: 
