@@ -18,7 +18,7 @@ jobs:
     - stage: prelim
       script: 
         - pwd
-        - which pylint
+#       - which pylint
         - ls -l
     - stage: run_hello
       script: ./hello_world.py
