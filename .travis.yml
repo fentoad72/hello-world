@@ -7,9 +7,10 @@ before_install:
 # - stage: "install pylint"
     pip install pylint
 
-python: 
-  - "2.7"
-  - "3.6"
+install:
+  python: 
+    - "2.7"
+    - "3.6"
 
 jobs:
   - include:
