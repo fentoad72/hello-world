@@ -7,14 +7,17 @@ python:
 install:
   - pip install pylint
 
+jobs:
+  - allow_failures:
+     - pylint
 script: 
   - pwd
   - which pylint
   - ls -l
   - ./hello_world.py
-
-after_script:
   - pylint ./hello_world.py
+
+#after_script:
 
 #
 branches:
