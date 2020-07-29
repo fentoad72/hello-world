@@ -12,14 +12,15 @@ jobs:
       script: 
       - pwd
       - ls -l
-  - stage: run_matrix
-    python:
-    - '3.6'
-    - '2.7'
-    script: 
-    - ./script1.py
-    - ./script2.py 
-    - ./script3.py
+  - include:
+    - stage: run_matrix
+      python:
+      - '3.6'
+      - '2.7'
+      script: 
+      - ./script1.py
+      - ./script2.py 
+      - ./script3.py
   - include:
     - stage: run_hello
       python: '2.7'
@@ -27,12 +28,8 @@ jobs:
       - ./hello_world.py
 
 
-#     - script:
-#         ./script2.py 
-#     - script:
-#         ./script3.py
-
 after_script:
+  - python: '3.7'
   - pylint ./hello_world.py
 # - allow_failure: pylint
 
