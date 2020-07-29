@@ -16,12 +16,14 @@ jobs:
       python: '3.6'
 #      - '3.6'
 #      - '2.7'
+      name: fox
       script: 
-       - name: fox
          ./script1.py
-       - name: dobalino
+      name: dobaline
+      script:
          ./script2.py 
-       - name: zilch
+      name: zilch
+      script
          ./script3.py
 
 after_script:
