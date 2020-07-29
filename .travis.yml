@@ -13,16 +13,16 @@ jobs:
         - pwd
         - ls -l
     - stage: run_hello
-      python: 3.6
+      python: '3.6'
 #      - '3.6'
 #      - '2.7'
       script: 
 #      - name: fox
        ./script1.py
 #      - name: dobalino
-#        ./script2.py 
+       ./script2.py 
 #      - name: zilch
-#        ./script3.py
+       ./script3.py
 
 after_script:
   - pylint ./hello_world.py
