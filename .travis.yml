@@ -23,7 +23,9 @@ jobs:
 #     - ./script3.py
 
     - stage: run_hello
-      python: '2.7'
+      python: 
+      - '2.7'
+      - '3.6'
       script:
       - ./hello_world.py
 
