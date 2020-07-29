@@ -17,13 +17,13 @@ jobs:
 #         - '3.6'
 #         - '2.7'
       - script: 
-          name: fox
+#         name: fox
           ./script1.py
       - script:
-          name: dobalino
+#         name: dobalino
           ./script2.py 
       - script:
-          name: zilch
+#         name: zilch
           ./script3.py
 
 after_script:
