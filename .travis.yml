@@ -6,12 +6,13 @@ version: ~> 1.0
 install:
   - pip install pylint
 
-stage: prelim
-  jobs:
-    script: 
-    - pwd
-    - ls -l
-# stage: run_matrix
+jobs:
+  include:
+    -  stage: prelim
+       script: 
+       - pwd
+       - ls -l
+#   stage: run_matrix
 #   python:
 #   - '2.7'
 #   - '3.6'
@@ -20,11 +21,10 @@ stage: prelim
 #   - ./script2.py 
 #   - ./script3.py
 
-stage: run_hello
-  jobs:
-    python: '2.7'
-    script:
-    - ./hello_world.py
+    - stage: run_hello
+      python: '2.7'
+      script:
+      - ./hello_world.py
 
 
 after_script:
