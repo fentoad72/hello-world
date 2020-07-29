@@ -18,8 +18,8 @@ jobs:
         - '2.7'
       script: 
         - ./script1.py
-#       - ./script2.py 
-#       - ./script3.py
+        - ./script2.py 
+        - ./script3.py
 
 #     - script:
 #         ./script2.py 
