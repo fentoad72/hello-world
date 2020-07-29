@@ -32,8 +32,7 @@ jobs:
 
 
 after_script:
-  - python: '3.7'
-    pylint ./hello_world.py
+  pylint ./hello_world.py
 # - allow_failure: pylint
 
 
