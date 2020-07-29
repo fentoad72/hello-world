@@ -20,6 +20,8 @@ jobs:
 #   - ./script1.py
 #   - ./script2.py 
 #   - ./script3.py
+
+jobs:
   include:
     - stage: run_hello
       python: '2.7'
