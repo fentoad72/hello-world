@@ -23,6 +23,7 @@ jobs:
 #     - ./script3.py
 
     - stage: run_hello
+      language: python
       python: 
         - "2.7"
         - "3.6"
