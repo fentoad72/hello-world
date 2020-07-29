@@ -10,18 +10,19 @@ python:
  - "3.6"
  - "3.7"
 
+stage: run_matrix
+  script:
+    - ./script1.py
+    - ./script2.py
+    - ./script3.py
+
+
 jobs:
   include:
     - stage: prelim
       script: 
       - pwd
       - ls -l
-
-    - stage: run_matrix
-      script:
-        - ./script1.py
-        - ./script2.py
-        - ./script3.py
 
     - stage: run_hello
       script:
