@@ -24,15 +24,14 @@ jobs:
 
     - stage: run_hello
       python: 
-      - '2.7'
-      - '3.6'
+        - '2.7'
+        - '3.6'
       script:
-      - ./hello_world.py
+        - ./hello_world.py
 
 
-after_script:
-  pylint ./hello_world.py
-# - allow_failure: pylint
+#after_script:
+#  pylint ./hello_world.py
 
 
 #
