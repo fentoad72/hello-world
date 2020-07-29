@@ -8,18 +8,19 @@ install:
 
 jobs:
   include:
-    -  stage: prelim
-       script: 
-       - pwd
-       - ls -l
-#   stage: run_matrix
-#   python:
-#   - '2.7'
-#   - '3.6'
-#  script: 
-#   - ./script1.py
-#   - ./script2.py 
-#   - ./script3.py
+    - stage: prelim
+      script: 
+      - pwd
+      - ls -l
+
+#   - stage: run_matrix
+#     python:
+#     - '2.7'
+#     - '3.6'
+#     script: 
+#     - ./script1.py
+#     - ./script2.py 
+#     - ./script3.py
 
     - stage: run_hello
       python: '2.7'
