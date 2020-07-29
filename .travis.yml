@@ -10,16 +10,22 @@ jobs:
   - include:
     - stage: prelim
       script: 
-        - pwd
-        - ls -l
-    - stage: run_hello
+      - pwd
+      - ls -l
+    - stage: run_matrix
       python:
-        - '3.6'
-        - '2.7'
+      - '3.6'
+      - '2.7'
       script: 
-        - ./script1.py
-        - ./script2.py 
-        - ./script3.py
+      - ./script1.py
+      - ./script2.py 
+      - ./script3.py
+  - include:
+    - stage: run_hello
+      python: '2.7'
+      script:
+      - ./hello_world.py
+
 
 #     - script:
 #         ./script2.py 
