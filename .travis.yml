@@ -24,11 +24,11 @@ jobs:
 #   - ./script1.py
 #   - ./script2.py 
 #   - ./script3.py
-  include:
-    - stage: run_hello
-      python: '2.7'
-      script:
-      - ./hello_world.py
+# include:
+#   - stage: run_hello
+#     python: '2.7'
+#     script:
+#     - ./hello_world.py
 
 
 after_script:
