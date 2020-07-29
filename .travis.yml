@@ -6,15 +6,14 @@ version: ~> 1.0
 #before_install:
 #  - pip install pylint
 
+stage: run_matrix
 python:
  - "3.6"
  - "3.7"
-
-stage: run_matrix
-  script:
-    - ./script1.py
-    - ./script2.py
-    - ./script3.py
+script:
+  - ./script1.py
+  - ./script2.py
+  - ./script3.py
 
 
 jobs:
