@@ -12,15 +12,15 @@ jobs:
       script: 
       - pwd
       - ls -l
-  - include:
-    - stage: run_matrix
-      python:
-      - '3.6'
-      - '2.7'
-      script: 
-      - ./script1.py
-      - ./script2.py 
-      - ./script3.py
+# - include:
+#   - stage: run_matrix
+#     python:
+#     - '3.6'
+#     - '2.7'
+#     script: 
+#     - ./script1.py
+#     - ./script2.py 
+#     - ./script3.py
   - include:
     - stage: run_hello
       python: '2.7'
