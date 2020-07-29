@@ -13,9 +13,9 @@ jobs:
         - pwd
         - ls -l
     - stage: run_hello
-      python:
-        - '3.6'
-#       - '2.7'
+      - python:
+          - '3.6'
+#         - '2.7'
       - script: 
           ./script1.py
       - script:
