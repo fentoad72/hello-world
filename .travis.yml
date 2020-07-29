@@ -7,30 +7,30 @@ install:
   - pip install pylint
 
 jobs:
-  - include:
-    - stage: prelim
-      script: 
-      - pwd
-      - ls -l
 # - include:
-#   - stage: run_matrix
-#     python:
-#     - '3.6'
-#     - '2.7'
+#   - stage: prelim
 #     script: 
-#     - ./script1.py
-#     - ./script2.py 
-#     - ./script3.py
+#     - pwd
+#     - ls -l
   - include:
-    - stage: run_hello
-      python: '2.7'
-      script:
-      - ./hello_world.py
+    - stage: run_matrix
+      python:
+      - '3.6'
+      - '2.7'
+      script: 
+      - ./script1.py
+      - ./script2.py 
+      - ./script3.py
+# - include:
+#   - stage: run_hello
+#     python: '2.7'
+#     script:
+#     - ./hello_world.py
 
 
 after_script:
   - python: '3.7'
-  - pylint ./hello_world.py
+    pylint ./hello_world.py
 # - allow_failure: pylint
 
 
