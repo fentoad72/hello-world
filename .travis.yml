@@ -3,11 +3,6 @@ os: linux
 dist: xenial
 version: ~> 1.0
 
-#python: "3.6"
-#python: 
-#  - "3.6"
-#  - "2.7"
-
 install:
   - pip install pylint
 
@@ -16,12 +11,11 @@ jobs:
     - stage: prelim
       script: 
         - pwd
-#       - which pylint
         - ls -l
     - stage: run_hello
-      python: 
-       - '3.6'
-       - '2.7'
+#     python: 
+#      - '3.6'
+#      - '2.7'
       script: 
        - name: fox
          ./script1.py
