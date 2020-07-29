@@ -11,24 +11,24 @@ install:
   - pip install pylint
 
 jobs:
-# - include:
-#   - stage: prelim
-#     script: 
-#     - pwd
-#     - ls -l
-  stage: run_matrix
-    python:
+  include:
+    - stage: prelim
+      script: 
+      - pwd
+      - ls -l
+# stage: run_matrix
+#   python:
 #   - '2.7'
-    - '3.6'
-   script: 
-    - ./script1.py
-    - ./script2.py 
-    - ./script3.py
-# - include:
-#   - stage: run_hello
-#     python: '2.7'
-#     script:
-#     - ./hello_world.py
+#   - '3.6'
+#  script: 
+#   - ./script1.py
+#   - ./script2.py 
+#   - ./script3.py
+  include:
+    - stage: run_hello
+      python: '2.7'
+      script:
+      - ./hello_world.py
 
 
 after_script:
