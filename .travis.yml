@@ -6,9 +6,9 @@ version: ~> 1.0
 install:
   - pip install pylint
 
-jobs:
-  include:
-    - stage: prelim
+stage: prelim
+  jobs:
+    include:
       script: 
       - pwd
       - ls -l
@@ -21,9 +21,9 @@ jobs:
 #   - ./script2.py 
 #   - ./script3.py
 
-jobs:
-  include:
-    - stage: run_hello
+stage: run_hello
+  jobs:
+    include:
       python: '2.7'
       script:
       - ./hello_world.py
