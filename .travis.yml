@@ -8,10 +8,9 @@ install:
 
 stage: prelim
   jobs:
-    include:
-      script: 
-      - pwd
-      - ls -l
+    script: 
+    - pwd
+    - ls -l
 # stage: run_matrix
 #   python:
 #   - '2.7'
@@ -23,10 +22,9 @@ stage: prelim
 
 stage: run_hello
   jobs:
-    include:
-      python: '2.7'
-      script:
-      - ./hello_world.py
+    python: '2.7'
+    script:
+    - ./hello_world.py
 
 
 after_script:
