@@ -3,8 +3,8 @@ os: linux
 dist: xenial
 version: ~> 1.0
 
-before_install:
-  - pip install pylint
+#before_install:
+#  - pip install pylint
 
 python:
  - "3.6"
