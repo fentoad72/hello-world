@@ -13,14 +13,14 @@ jobs:
       - pwd
       - ls -l
 
-#   - stage: run_matrix
-#     python:
-#     - '2.7'
-#     - '3.6'
-#     script: 
-#     - ./script1.py
-#     - ./script2.py 
-#     - ./script3.py
+    - stage: run_matrix
+      language: python
+      python:
+      - "2.7"
+      - "3.6"
+      script: script1.py
+      script: script2.py
+      script: script3.py
 
     - stage: run_hello
       language: python
