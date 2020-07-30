@@ -17,7 +17,7 @@ before_script:
 # set up job maxtrix
 # in Travis settings, set allow concurent jobs >1
 # these jobs run concurrently
-stage: run_matrix
+stage: "run_matrix"
 sudo: enabled
 dist: xenial
 
@@ -38,17 +38,17 @@ script:
 # use 'trusty' dist to be different from above
 jobs:  
   include:
-  - stage: run_hello_trusty
+  - stage: "run_hello_trusty"
     python: '3.6'
     dist: trusty
     script:
      - ./hello_world.py
-  - stage: run_hello_precise
+  - stage: "run_hello_precise"
     python: '3.6'
     dist: precise
     script:
      - ./hello_world.py
-  - stage: run_hello_xenial
+  - stage: "run_hello_xenial"
     python: '3.6'
     dist: xenial
     script:
