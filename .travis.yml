@@ -14,9 +14,9 @@ install:
   - pip install pylint
 
 before_script:
-  stage: prelim
-   - pwd
-   - ls -l
+  - stage: prelim
+    - pwd
+    - ls -l
 
 stage: run_matrix
 python:
