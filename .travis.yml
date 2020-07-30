@@ -12,7 +12,8 @@ before_script:
   - ls -l
 
 # set up job maxtrix
-stage: run_maxtrix
+# in Travis settings, set allow concurent jobs >1
+stage: run_matrix
 python:
   - '2.7'
   - '3.6'
@@ -29,26 +30,18 @@ jobs:
     python: '2.7'
     script:
      - ./hello_world.py
-# include:
   - stage: run_hello_3.6
     python: '3.6'
     script:
      - ./hello_world.py
-# include:
   - stage: run_hello_3.7
     python: '3.7'
     script:
      - ./hello_world.py
 
-#jobs:
-#  include:
-#    - stage: run_hello
-#      python: '3.7'
-#      script:
-#        - ./hello_world.py
-
-
+# after script, lint the python
 after_script:
+  python: '3.6'
   pylint ./hello_world.py
 
 
