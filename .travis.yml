@@ -13,6 +13,12 @@ version: ~> 1.0
 install:
   - pip install pylint
 
+before_script:
+  name: prelim
+  script:
+   - pwd
+   - ls -l
+
 stage: run_matrix
 python:
  - "3.6"
