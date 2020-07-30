@@ -23,21 +23,18 @@ script:
   - ./script2.py
   - ./script3.py
 
-# add explictly 3 more jobs
+# add explictly 3 more jobs which run one at a time
 jobs:  
   include:
-  - stage: 
-    name: run_hello_2.7
+  - stage: run_hello_2.7
     python: '2.7'
     script:
      - ./hello_world.py
-  - stage: 
-    name: run_hello_3.6
+  - stage: run_hello_3.6
     python: '3.6'
     script:
      - ./hello_world.py
-  - stage: 
-    name: run_hello_3.7
+  - stage: run_hello_3.7
     python: '3.7'
     script:
      - ./hello_world.py
