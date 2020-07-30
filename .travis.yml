@@ -18,20 +18,14 @@ python:
 
 jobs:  
   - stage: run_matrix
-#   python: ['2.7','3.6','3.7']
-#    - '2.7'
-#    - '3.6'
-#    - '3.7'
+    python: {}
     script:
      - ./script1.py
      - ./script2.py
      - ./script3.py
 
   - stage: run_hello
-#   python: ['2.7','3.6','3.7']
-#    - '2.7'
-#    - '3.6'
-#    - '3.7'
+    python: {}
     script:
      - ./hello_world.py
 
