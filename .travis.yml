@@ -13,9 +13,9 @@ before_script:
 
 stage: run_matrix
 python:
- - "2.7"
- - "3.6"
- - "3.7"
+ - '2.7'
+ - '3.6'
+ - '3.7'
 script:
   - ./script1.py
   - ./script2.py
@@ -24,8 +24,8 @@ script:
 
 jobs:
   include:
-
     - stage: run_hello
+      python: '3.7'
       script:
         - ./hello_world.py
 
