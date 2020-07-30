@@ -31,8 +31,8 @@ jobs:
         - ./hello_world.py
 
 
-#after_script:
-#  pylint ./hello_world.py
+after_script:
+  pylint ./hello_world.py
 
 
 #
