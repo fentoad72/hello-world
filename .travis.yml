@@ -11,26 +11,30 @@ before_script:
   - pwd
   - ls -l
 
-#stage: run_matrix
+stage: run_matrix
 python:
  - '2.7'
  - '3.6'
  - '3.7'
 script:
-  - stage: fox
-    ./script1.py
-  - stage: dobalino
-    ./script2.py
-  - stage: zilch
-    ./script3.py
+ - ./script1.py
+ - ./script2.py
+ - ./script3.py
 
+stage: run_hello
+python:
+ - '2.7'
+ - '3.6'
+ - '3.7'
+script:
+ - ./hello_world.py
 
-jobs:
-  include:
-    - stage: run_hello
-      python: '3.7'
-      script:
-        - ./hello_world.py
+#jobs:
+#  include:
+#    - stage: run_hello
+#      python: '3.7'
+#      script:
+#        - ./hello_world.py
 
 
 after_script:
