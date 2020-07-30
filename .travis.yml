@@ -4,22 +4,16 @@ dist: xenial
 version: ~> 1.0
 
 
-#before_install:
-#  -  stage: prelim
-#     script: 
-#     - pwd
-#     - ls -l
-
 install:
   - pip install pylint
 
 before_script:
-  - stage: prelim
-    - pwd
-    - ls -l
+  - pwd
+  - ls -l
 
 stage: run_matrix
 python:
+ - "2.7"
  - "3.6"
  - "3.7"
 script:
