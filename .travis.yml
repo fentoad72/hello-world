@@ -11,21 +11,30 @@ before_script:
   - pwd
   - ls -l
 
+stage: run_maxtrix
 python:
   - '2.7'
   - '3.6'
   - '3.7'
+script:
+  - ./script1.py
+  - ./script2.py
+  - ./script3.py
 
 jobs:  
-  - stage: run_matrix
-    python: {}
+  include:
+  - stage: run_hello_2.7
+    python: '2.7'
     script:
-     - ./script1.py
-     - ./script2.py
-     - ./script3.py
-
-  - stage: run_hello
-    python: {}
+     - ./hello_world.py
+  include:
+  - stage: run_hello_3.6
+    python: '3.6'
+    script:
+     - ./hello_world.py
+  include:
+  - stage: run_hello_3.7
+    python: '3.7'
     script:
      - ./hello_world.py
 
