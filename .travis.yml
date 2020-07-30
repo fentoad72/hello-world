@@ -1,6 +1,8 @@
 language: python
 os: linux
-dist: xenial
+dist: 
+  - xenial
+  - trusty
 version: ~> 1.0
 
 
@@ -13,17 +15,22 @@ before_script:
 
 # set up job maxtrix
 # in Travis settings, set allow concurent jobs >1
+# these jobs run concurrently
 stage: run_matrix
 python:
   - '2.7'
+  - '3.3'
+  - '3.4'
+  - '3.5'
   - '3.6'
   - '3.7'
+  - '3.8'
 script:
   - ./script1.py
   - ./script2.py
   - ./script3.py
 
-# add explictly 3 more jobs which run one at a time
+# add explictly 3 more jobs which run in series
 jobs:  
   include:
   - stage: run_hello_2.7
@@ -40,6 +47,7 @@ jobs:
      - ./hello_world.py
 
 # after script, lint the python
+# python version should match script above
 after_script:
   - pylint ./hello_world.py
 
