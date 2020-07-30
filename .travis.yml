@@ -41,8 +41,7 @@ jobs:
 
 # after script, lint the python
 after_script:
-  - name: linting
-    pylint ./hello_world.py
+  - pylint ./hello_world.py
 
 
 #
