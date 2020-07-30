@@ -14,9 +14,11 @@ before_script:
 # in Travis settings, set allow concurent jobs >1
 # these jobs run concurrently
 stage: run_matrix
+sudo: enabled
 dist: 
   - xenial
   - trusty
+  - precise
 python:
   - '2.7'
 # - '3.3' # failed
@@ -46,7 +48,7 @@ jobs:
      - ./hello_world.py
   - stage: run_hello_3.7
     python: '3.7'
-    dist: trusty
+    dist: xenial
     script:
      - ./hello_world.py
 
