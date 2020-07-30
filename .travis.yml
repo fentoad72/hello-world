@@ -11,7 +11,7 @@ before_script:
   - pwd
   - ls -l
 
-stage: run_matrix
+#stage: run_matrix
 python:
  - '2.7'
  - '3.6'
