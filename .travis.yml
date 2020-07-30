@@ -2,6 +2,10 @@ language: python
 os: linux
 version: ~> 1.0
 
+branches:
+  only:
+    - master
+    - travis
 
 install:
   - pip install pylint
@@ -45,7 +49,7 @@ jobs:
     script:
      - ./hello_world.py
   - stage: run_hello_xenial
-    python: '3.7'
+    python: '3.6'
     dist: xenial
     script:
      - ./hello_world.py
@@ -56,8 +60,3 @@ after_script:
   - pylint ./hello_world.py
 
 
-#
-branches:
-  only:
-    - master
-    - travis
