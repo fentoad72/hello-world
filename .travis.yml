@@ -4,11 +4,11 @@ dist: xenial
 version: ~> 1.0
 
 
-before_install:
-  -  stage: prelim
-     script: 
-     - pwd
-     - ls -l
+#before_install:
+#  -  stage: prelim
+#     script: 
+#     - pwd
+#     - ls -l
 
 install:
   - pip install pylint
