@@ -12,23 +12,23 @@ before_script:
   - ls -l
 
 jobs:  
-  stage: run_matrix
-  python:
-   - '2.7'
-   - '3.6'
-   - '3.7'
-  script:
-   - ./script1.py
-   - ./script2.py
-   - ./script3.py
+  - stage: run_matrix
+    python:
+     - '2.7'
+     - '3.6'
+     - '3.7'
+    script:
+     - ./script1.py
+     - ./script2.py
+     - ./script3.py
 
-  stage: run_hello
-  python:
-   - '2.7'
-   - '3.6'
-   - '3.7'
-  script:
-   - ./hello_world.py
+  - stage: run_hello
+    python:
+     - '2.7'
+     - '3.6'
+     - '3.7'
+    script:
+     - ./hello_world.py
 
 #jobs:
 #  include:
