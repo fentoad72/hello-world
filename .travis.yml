@@ -40,8 +40,8 @@ jobs:
      - ./hello_world.py
 
 # after script, lint the python
+python: '3.6'
 after_script:
-  python: '3.6'
   pylint ./hello_world.py
 
 
