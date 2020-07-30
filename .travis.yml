@@ -13,8 +13,7 @@ before_script:
 
 # set up job maxtrix
 # in Travis settings, set allow concurent jobs >1
-stage: 
-name: run_matrix
+stage: run_matrix
 python:
   - '2.7'
   - '3.6'
