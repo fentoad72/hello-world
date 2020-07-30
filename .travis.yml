@@ -13,7 +13,8 @@ before_script:
 
 # set up job maxtrix
 # in Travis settings, set allow concurent jobs >1
-stage: run_matrix
+stage: 
+name: run_matrix
 python:
   - '2.7'
   - '3.6'
@@ -26,15 +27,18 @@ script:
 # add explictly 3 more jobs
 jobs:  
   include:
-  - stage: run_hello_2.7
+  - stage: 
+    name: run_hello_2.7
     python: '2.7'
     script:
      - ./hello_world.py
-  - stage: run_hello_3.6
+  - stage: 
+    name: run_hello_3.6
     python: '3.6'
     script:
      - ./hello_world.py
-  - stage: run_hello_3.7
+  - stage: 
+    name: run_hello_3.7
     python: '3.7'
     script:
      - ./hello_world.py
@@ -46,6 +50,6 @@ after_script:
 
 #
 branches:
-        only:
-                - master
-                - travis
+  only:
+    - master
+    - travis
