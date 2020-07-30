@@ -17,9 +17,12 @@ python:
  - '3.6'
  - '3.7'
 script:
-  - ./script1.py
-  - ./script2.py
-  - ./script3.py
+  - stage: fox
+    ./script1.py
+  - stage: dobalino
+    ./script2.py
+  - stage: zilch
+    ./script3.py
 
 
 jobs:
