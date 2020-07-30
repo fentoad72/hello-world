@@ -31,6 +31,7 @@ script:
   - ./script3.py
 
 # add explictly 3 more jobs which run in series
+# use 'trusty' dist to be different from above
 jobs:  
   include:
   - stage: run_hello_2.7
@@ -40,12 +41,12 @@ jobs:
      - ./hello_world.py
   - stage: run_hello_3.6
     python: '3.6'
-    dist: xenial
+    dist: trusty
     script:
      - ./hello_world.py
   - stage: run_hello_3.7
     python: '3.7'
-    dist: xenial
+    dist: trusty
     script:
      - ./hello_world.py
 
