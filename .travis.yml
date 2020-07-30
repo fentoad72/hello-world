@@ -14,8 +14,7 @@ install:
   - pip install pylint
 
 before_script:
-  name: prelim
-  script:
+  stage: prelim
    - pwd
    - ls -l
 
