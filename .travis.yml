@@ -42,7 +42,6 @@ jobs:
 # after script, lint the python
 after_script:
   - name: linting
-    python: '3.6'
     pylint ./hello_world.py
 
 
