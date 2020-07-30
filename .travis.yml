@@ -15,10 +15,8 @@ before_script:
 # these jobs run concurrently
 stage: run_matrix
 sudo: enabled
-dist: 
-  - xenial
-  - trusty
-  - precise
+dist: xenial
+
 python:
   - '2.7'
 # - '3.3' # failed
@@ -36,17 +34,17 @@ script:
 # use 'trusty' dist to be different from above
 jobs:  
   include:
-  - stage: run_hello_2.7
-    python: '2.7'
-    dist: trusty
-    script:
-     - ./hello_world.py
-  - stage: run_hello_3.6
+  - stage: run_hello_trusty
     python: '3.6'
     dist: trusty
     script:
      - ./hello_world.py
-  - stage: run_hello_3.7
+  - stage: run_hello_precise
+    python: '3.6'
+    dist: precise
+    script:
+     - ./hello_world.py
+  - stage: run_hello_xenial
     python: '3.7'
     dist: xenial
     script:
