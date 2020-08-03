@@ -21,10 +21,11 @@ stage: "run_matrix"
 sudo: enabled
 
 # job matrix: this is implicit
-dist:
-  - trusty
+#dist:
+# - trusty
 # - xenial
 # - precise
+dist: xenial
 python:
   - '2.7'
 # - '3.3' # failed
