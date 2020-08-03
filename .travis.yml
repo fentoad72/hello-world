@@ -37,7 +37,6 @@ script:
   - ./script1.py
   - ./script2.py
   - ./script3.py
-  - precise
 
 # add explictly 3 more jobs which run in series
 # use 'trusty' dist to be different from above
