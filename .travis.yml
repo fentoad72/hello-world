@@ -33,10 +33,10 @@ python:
   - '3.6'
   - '3.7'
   - '3.8'
-script:
-  - ./script1.py
-  - ./script2.py
-  - ./script3.py
+#script:
+#  - ./script1.py
+#  - ./script2.py
+#  - ./script3.py
 
 # add explictly 3 more jobs which run in series
 # use 'trusty' dist to be different from above
