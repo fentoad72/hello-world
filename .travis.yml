@@ -21,6 +21,7 @@ stage: "run_matrix"
 sudo: enabled
 dist: xenial
 
+# job matrix: this is implicit
 python:
   - '2.7'
 # - '3.3' # failed
@@ -33,6 +34,10 @@ script:
   - ./script1.py
   - ./script2.py
   - ./script3.py
+dist:
+  - trusty
+  - xenial
+  - precise
 
 # add explictly 3 more jobs which run in series
 # use 'trusty' dist to be different from above
