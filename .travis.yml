@@ -19,9 +19,12 @@ before_script:
 # these jobs run concurrently
 stage: "run_matrix"
 sudo: enabled
-dist: xenial
 
 # job matrix: this is implicit
+dist:
+  - trusty
+  - xenial
+  - precise
 python:
   - '2.7'
 # - '3.3' # failed
@@ -34,9 +37,6 @@ script:
   - ./script1.py
   - ./script2.py
   - ./script3.py
-dist:
-  - trusty
-  - xenial
   - precise
 
 # add explictly 3 more jobs which run in series
