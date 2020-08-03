@@ -23,8 +23,8 @@ sudo: enabled
 # job matrix: this is implicit
 dist:
   - trusty
-  - xenial
-  - precise
+# - xenial
+# - precise
 python:
   - '2.7'
 # - '3.3' # failed
@@ -34,9 +34,9 @@ python:
   - '3.7'
   - '3.8'
 #script:
-#  - ./script1.py
-#  - ./script2.py
-#  - ./script3.py
+   - ./script1.py
+   - ./script2.py
+   - ./script3.py
 
 # add explictly 3 more jobs which run in series
 # use 'trusty' dist to be different from above
