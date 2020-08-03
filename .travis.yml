@@ -1,5 +1,6 @@
 language: python
 os: linux
+dist: xenial
 version: ~> 1.0
 
 branches:
@@ -25,7 +26,6 @@ sudo: enabled
 # - trusty
 # - xenial
 # - precise
-dist: xenial
 python:
   - '2.7'
 # - '3.3' # failed
